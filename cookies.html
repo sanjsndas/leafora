@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cookies Policy - Leafora Garden Designs</title>
+  <!-- Material Symbols Icon font -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <style>
+    /* Reset and base */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+        Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      background: linear-gradient(135deg, #203720 0%, #335433 70%, #1f3522 100%);
+      color: #d0e8c6;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 120px; /* space for cookie banner */
+    }
+    a {
+      color: #a1c17b;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    a:hover,
+    a:focus {
+      color: #7da755;
+      outline: none;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      width: 100%;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(34, 53, 22, 0.85);
+      backdrop-filter: saturate(150%) blur(8px);
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.6);
+    }
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .logo {
+      font-weight: 800;
+      font-size: 2rem;
+      letter-spacing: 0.12em;
+      color: #b9d77f;
+      display: flex;
+      align-items: center;
+      user-select: none;
+    }
+    .logo-icon {
+      margin-right: 8px;
+      fill: #a6c972;
+      width: 40px;
+      height: 40px;
+      animation: logoPulse 4s infinite ease-in-out;
+    }
+    @keyframes logoPulse {
+      0%, 100% { filter: drop-shadow(0 0 2px #a7ce79aa); }
+      50% { filter: drop-shadow(0 0 12px #9cc54acc); }
+    }
+    nav {
+      display: flex;
+      gap: 24px;
+    }
+    nav a {
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 8px 12px;
+      border-radius: 8px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    nav a:hover, nav a:focus {
+      background-color: #a1c17bdd;
+      color: #1a2809;
+      outline-offset: 2px;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #7fa833, #b7dc4f);
+      padding: 12px 28px;
+      border-radius: 16px;
+      color: #1a2809;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      user-select: none;
+    }
+    .btn-primary:hover,
+    .btn-primary:focus {
+      box-shadow: 0 8px 20px #b7dc4fbb;
+      transform: scale(1.07);
+      outline-offset: 3px;
+    }
+    .mobile-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: #b9d77f;
+      font-size: 2.4rem;
+      cursor: pointer;
+      padding: 8px;
+      user-select: none;
+    }
+    .mobile-nav {
+      display: none;
+      flex-direction: column;
+      background: rgba(34, 53, 22, 0.95);
+      backdrop-filter: saturate(150%) blur(10px);
+      position: absolute;
+      top: 64px;
+      right: 0;
+      width: 100%;
+      max-width: 280px;
+      padding: 24px 16px;
+      border-radius: 0 0 0 16px;
+      box-shadow: -4px 6px 20px rgba(0,0,0,0.8);
+      z-index: 150;
+    }
+    .mobile-nav a {
+      padding: 12px 16px;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 1.2rem;
+      color: #b9d77f;
+      margin-bottom: 10px;
+      user-select: none;
+    }
+    .mobile-nav a:hover,
+    .mobile-nav a:focus {
+      background-color: #a1c17bcc;
+      color: #1a2809;
+      outline-offset: 2px;
+    }
+    main {
+      flex: 1;
+      padding: 80px 24px 0;
+      max-width: 900px;
+      margin: 0 auto;
+      color: #ccd7a9;
+      font-size: 1rem;
+      line-height: 1.7;
+      font-weight: 500;
+      user-select: text;
+    }
+    main h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      text-align: center;
+      color: #aecb7f;
+      margin-bottom: 24px;
+      text-shadow: 0 0 8px #6a8800bb;
+    }
+    main h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-top: 48px;
+      margin-bottom: 16px;
+      color: #a5b97a;
+      text-shadow: 0 0 5px #536923bb;
+    }
+    main h3 {
+      font-weight: 700;
+      margin-bottom: 12px;
+      margin-top: 24px;
+      color: #9ec76d;
+    }
+    main p {
+      margin-bottom: 1.4em;
+    }
+    main ul {
+      margin-left: 1.5em;
+      margin-bottom: 1.4em;
+      list-style-type: disc;
+    }
+    main ul li {
+      margin-bottom: 0.6em;
+    }
+    /* Cookie consent banner */
+    #cookie-consent {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(34, 53, 22, 0.95);
+      backdrop-filter: saturate(150%) blur(10px);
+      color: #b9d77f;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 24px;
+      font-size: 1rem;
+      z-index: 9999;
+      box-shadow: 0 -2px 8px rgba(0,0,0,0.8);
+    }
+    #cookie-consent p {
+      flex: 1 1 400px;
+      margin: 0 12px 8px 0;
+    }
+    #cookie-consent button {
+      background: linear-gradient(135deg, #7fa833, #b7dc4f);
+      border: none;
+      border-radius: 16px;
+      color: #1a2809;
+      padding: 10px 24px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      margin-left: 12px;
+      user-select: none;
+    }
+    #cookie-consent button:hover, #cookie-consent button:focus {
+      background-color: #96c74b;
+      transform: scale(1.05);
+      outline-offset: 3px;
+    }
+    #cookie-consent #decline-btn {
+      background: transparent;
+      color: #c7995e;
+      border: 2px solid #c7995e;
+    }
+    #cookie-consent #decline-btn:hover, #cookie-consent #decline-btn:focus {
+      background-color: #c7995e;
+      color: #1a2809;
+      transform: scale(1.05);
+      outline-offset: 3px;
+    }
+    footer {
+      background: #1c2b11;
+      padding: 24px;
+      color: #99a67d;
+      font-size: 0.9rem;
+      user-select: none;
+      text-align: center;
+      border-top: 1px solid #38511d;
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 10;
+    }
+    footer address {
+      font-style: normal;
+      font-weight: 600;
+      color: #b7d186;
+    }
+    footer .phone {
+      font-weight: 600;
+      color: #b7d186;
+    }
+    /* Responsive */
+    @media (max-width: 767px) {
+      .mobile-toggle {
+        display: inline-block;
+      }
+      nav {
+        display: none;
+      }
+      main {
+        padding: 64px 16px 0;
+      }
+      #cookie-consent {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      #cookie-consent p {
+        margin-bottom: 12px;
+      }
+      #cookie-consent button {
+        margin-left: 0;
+        margin-right: 12px;
+      }
+    }
+    @media (min-width: 768px) {
+      .mobile-nav {
+        display: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-container" role="banner">
+      <a href="index.html" class="logo" aria-label="Leafora Garden Designs homepage">
+        <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="currentColor" aria-hidden="true" focusable="false">
+          <path d="M32 2C14 2 2 18 2 34c0 14 14 28 30 28 16 0 30-14 30-28 0-16-14-32-30-32zM22 28c.7-2 2.3-4.6 5-6 2-1 4-1 6-1 1 0 3-2 4-2s2 1 2 2c0 3-3 8-10 11-1.3.4-4 1-7 1-2 0-3-2-3-5 0-3 4-3 4-3z" />
+        </svg>
+        Leafora
+      </a>
+      <nav role="navigation" aria-label="Primary navigation">
+        <a href="index.html" tabindex="0">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy</a>
+        <a href="terms.html" tabindex="0">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0"aria-current="page">Cookies</a>
+        <a href="contact.html" tabindex="0">Contact us</a>
+      </nav>
+      <button aria-label="Toggle menu" class="mobile-toggle" id="mobileToggle" aria-expanded="false" aria-controls="mobileMenu">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </div>
+    <nav class="mobile-nav" id="mobileMenu" aria-label="Mobile primary navigation" hidden>
+      <a href="index.html" tabindex="0">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy</a>
+        <a href="terms.html" tabindex="0">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0"aria-current="page">Cookies</a>
+        <a href="contact.html" tabindex="0">Contact us</a>
+    </nav>
+  </header>
+
+  <main role="main" aria-label="Cookies policy content">
+    <h1>Cookies Policy</h1>
+
+    <h2>Introduction</h2>
+    <p>This Cookies Policy explains how Leafora Garden Designs uses cookies and similar technologies on our website to recognize you, enhance your experience, and analyze website usage. By using our website, you consent to our use of cookies as described in this policy.</p>
+
+    <h2>What Are Cookies?</h2>
+    <p>Cookies are small text files stored on your device by your web browser. They help websites remember your preferences, login status, and usage patterns.</p>
+
+    <h2>Types of Cookies We Use</h2>
+    <ul>
+      <li><strong>Essential Cookies:</strong> Necessary for website functionality such as navigation and access to secure areas.</li>
+      <li><strong>Performance Cookies:</strong> Collect anonymous data on how visitors use the site to improve performance.</li>
+      <li><strong>Functionality Cookies:</strong> Remember your preferences such as language or region.</li>
+      <li><strong>Advertising Cookies:</strong> Used to deliver relevant ads based on your interests.</li>
+      <li><strong>Analytical Cookies:</strong> Gather information about website traffic and user behavior to help optimize our services.</li>
+      <li><strong>Social Media Cookies:</strong> Enable sharing and interaction with social networks directly from our site.</li>
+      <li><strong>Security Cookies:</strong> Help detect and prevent fraud and unauthorized access.</li>
+      <li><strong>Preference Cookies:</strong> Keep track of your preferences and settings for personalized experience.</li>
+    </ul>
+
+    <h2>How We Use Cookies</h2>
+    <p>We use cookies to personalize your user experience, provide analytics to improve our services, and show targeted advertising where appropriate. Essential cookies enable core functionalities and cannot be disabled without impacting website performance.</p>
+
+    <h2>Managing Cookies</h2>
+    <p>You can control cookies through your browser settings. You may choose to block or delete cookies, but this may affect website functionality. Additionally, you can update your preferences at any time via our cookie consent banner.</p>
+
+    <h2>Your Choices</h2>
+    <p>You have the option to accept or decline cookies using the cookie consent dialog at the bottom of the page. You may also change or withdraw consent at any time by clearing your cookies or adjusting your browser settings.</p>
+
+    <h2>Cookies We Use in Detail</h2>
+    <p>Our cookies include both first-party cookies set by Leafora Garden Designs and third-party cookies from analytics and advertising providers. For example, Google Analytics is used for site usage insights.</p>
+
+    <h2>Third-Party Cookies</h2>
+    <p>We use reputable third-party services such as Google Analytics, Facebook Pixel, and others, which may place cookies on your device for analytics, remarketing, and targeted ads. Please review their privacy policies for details.</p>
+
+    <h2>Data Protection</h2>
+    <p>Cookies do not store personal information directly, but some cookies track your behavior and preferences in an aggregated and anonymous form to help improve our website and services securely and responsibly.</p>
+
+    <h2>Cookie Duration</h2>
+    <p>Cookies may be session cookies, which expire when you close your browser, or persistent cookies, which remain until expired or deleted. Duration varies depending on cookie type and provider.</p>
+
+    <h2>Legal Compliance</h2>
+    <p>Our cookie practices comply with regulations such as the EU ePrivacy Directive, GDPR, and other applicable laws, ensuring transparency, user control, and data protection.</p>
+
+    <h2>Cookie Preferences Management</h2>
+    <p>You can manage your cookie preferences using the consent banner or through browser settings at any time. Disabling non-essential cookies may limit certain features and site functionality.</p>
+
+    <h2>Security and Cookies</h2>
+    <p>While cookies themselves do not typically contain sensitive information, we implement encryption and secure protocols (HTTPS) to protect your data during transmission and enhance overall security.</p>
+
+    <h2>Cookie Policy and Privacy Policy Relationship</h2>
+    <p>This Cookies Policy complements our <a href="privacy.html">Privacy Policy</a>, which covers broader data collection, usage, and protection practices.</p>
+
+    <h2>Frequently Asked Questions About Cookies</h2>
+    <h3>What happens if I decline cookies?</h3>
+    <p>Declining cookies may limit your access to some features and reduce personalized services on our website, but you can still browse most content.</p>
+
+    <h3>How do I change my cookie settings?</h3>
+    <p>You can modify your cookie settings through the cookie consent banner or adjust browser preferences to control cookie behavior, including deleting existing cookies.</p>
+
+    <h3>Are cookies safe?</h3>
+    <p>Cookies are generally safe and are widely used to improve website experience. We ensure all cookies used on our site are secure and comply with regulations.</p>
+
+    <h2>Cookies in Different Browsers</h2>
+    <p>Your ability to manage cookies may vary by browser (Chrome, Firefox, Safari, Edge, etc.) and device. We recommend checking specific browser instructions if you want to adjust cookies precisely.</p>
+
+    <h2>Cookies and Mobile Apps</h2>
+    <p>Our cookie policy applies primarily to our website. Mobile apps may use different tracking mechanisms governed by app-specific policies.</p>
+
+    <h2>Updates to This Cookies Policy</h2>
+    <p>We may update this policy from time to time to reflect changes in our practices or regulatory requirements. We encourage you to review this page regularly.</p>
+
+    <h2>Contact Us</h2>
+    <p>If you have questions or concerns about our use of cookies, please contact us at:</p>
+    <p><strong>Email:</strong> cookies@leaforagarden.com</p>
+    <p><strong>Phone:</strong> +1-855-755-0199</p>
+    <p><strong>Address:</strong> East 14th Street, New York, NY 10003, United States</p>
+
+    <!-- Additional sections and extended detail paragraphs to simulate extensive content -->
+
+    <h2>Understanding Cookie Consent</h2>
+    <p>The concept of cookie consent is critical to your privacy rights under various regulations. We require your consent before placing non-essential cookies on your device, allowing you transparency and control over your data.</p>
+
+    <h2>Types of Tracking Technologies Used</h2>
+    <p>Besides cookies, our website may use other tracking technologies such as web beacons, pixel tags, and local storage. These technologies work together to provide a seamless user experience and collect analytical data.</p>
+
+    <h2>Your Rights to Withdraw Consent</h2>
+    <p>You can withdraw your consent to cookie use at any time by clicking the decline button in the cookie dialog box or changing your browser settings. We respect your preferences and adjust website behavior accordingly.</p>
+
+    <h2>Limitations When Cookies Are Disabled</h2>
+    <p>Disabling cookies may impact your experience by restricting access to personalized features, saved preferences, and might require you to login more often.</p>
+
+    <h2>How to Delete Cookies</h2>
+    <p>Instructions on deleting cookies on popular browsers are available through various online resources. Clearing cookies removes tracking and stored preferences.</p>
+
+    <h2>Cookie Settings on Different Devices</h2>
+    <p>Cookie preferences are stored per browser and device. You may need to set preferences individually on each device you use.</p>
+
+    <h2>Cookies and Third-Party Advertising</h2>
+    <p>We may work with third-party advertisers who use cookies to offer relevant advertisements. These partners operate under their own privacy policies.</p>
+
+    <h2>Data Protection and Security Of Cookie Data</h2>
+    <p>We treat the data collected through cookies with care and protect it using industry-standard security measures.</p>
+
+    <h2>Additional Resources and User Education</h2>
+    <p>We provide resources to help users understand cookies and online privacy better, empowering you to make informed decisions.</p>
+
+    <h2>Effective Date</h2>
+    <p>This Cookies Policy is effective as of July 17, 2024.</p>
+
+  </main>
+
+  <footer role="contentinfo">
+    <div class="container">
+      <address>
+        East 14th Street, New York, NY 10003, United States
+      </address>
+      <span class="phone">Phone: +1-855-755-0199</span>
+    </div>
+  </footer>
+
+  <div id="cookie-consent" role="dialog" aria-live="polite" aria-label="Cookies consent">
+    <p>Our website uses cookies to enhance your browsing experience. Do you accept the use of cookies? You can change your preferences anytime.</p>
+    <div>
+      <button id="accept-btn" type="button" aria-label="Accept cookies">Accept</button>
+      <button id="decline-btn" type="button" aria-label="Decline cookies">Decline</button>
+    </div>
+  </div>
+
+  <script>
+    const mobileToggle = document.getElementById('mobileToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    mobileToggle.addEventListener('click', () => {
+      const expanded = mobileToggle.getAttribute('aria-expanded') === 'true';
+      if (expanded) {
+        mobileMenu.hidden = true;
+        mobileToggle.setAttribute('aria-expanded', 'false');
+        mobileMenu.classList.remove('show');
+      } else {
+        mobileMenu.hidden = false;
+        mobileToggle.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.add('show');
+      }
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 767) {
+        mobileMenu.hidden = true;
+        mobileMenu.classList.remove('show');
+        mobileToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    // Cookie Consent Handling
+    const cookieConsent = document.getElementById('cookie-consent');
+    const acceptBtn = document.getElementById('accept-btn');
+    const declineBtn = document.getElementById('decline-btn');
+
+    function setCookie(name, value, days) {
+      const d = new Date();
+      d.setTime(d.getTime() + (days*24*60*60*1000));
+      const expires = "expires="+d.toUTCString();
+      document.cookie = name + "=" + value + ";" + expires + ";path=/;SameSite=Lax";
+    }
+
+    function getCookie(name) {
+      const cname = name + "=";
+      const decodedCookie = decodeURIComponent(document.cookie);
+      const ca = decodedCookie.split(';');
+      for(let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while(c.charAt(0) === ' ') {
+          c = c.substring(1);
+        }
+        if(c.indexOf(cname) === 0) {
+          return c.substring(cname.length, c.length);
+        }
+      }
+      return "";
+    }
+
+    function hideConsent() {
+      cookieConsent.style.display = 'none';
+    }
+
+    function showConsent() {
+      cookieConsent.style.display = 'flex';
+    }
+
+    window.addEventListener('load', () => {
+      const consent = getCookie('leafora_cookie_consent');
+      if(consent === '') {
+        showConsent();
+      } else {
+        hideConsent();
+      }
+    });
+
+    acceptBtn.addEventListener('click', () => {
+      setCookie('leafora_cookie_consent', 'accepted', 365);
+      hideConsent();
+    });
+
+    declineBtn.addEventListener('click', () => {
+      setCookie('leafora_cookie_consent', 'declined', 365);
+      hideConsent();
+    });
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Leafora Garden Designs - Professional Garden & Forestry Design Services</title>
+  <!-- Material Symbols Icon font link -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <style>
+    /* Reset and base */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+        Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      background: linear-gradient(135deg, #203720 0%, #335433 70%, #1f3522 100%);
+      color: #d0e8c6;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    a {
+      color: #a1c17b;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover,
+    a:focus {
+      color: #7da755;
+      outline: none;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+      display: block;
+      margin: 0 auto;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      width: 100%;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(34, 53, 22, 0.85);
+      backdrop-filter: saturate(150%) blur(8px);
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.6);
+    }
+
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .logo {
+      font-weight: 800;
+      font-size: 2rem;
+      letter-spacing: 0.12em;
+      color: #b9d77f;
+      display: flex;
+      align-items: center;
+      user-select: none;
+    }
+
+    .logo-icon {
+      margin-right: 8px;
+      fill: #a6c972;
+      width: 40px;
+      height: 40px;
+      animation: logoPulse 4s infinite ease-in-out;
+    }
+
+    @keyframes logoPulse {
+      0%, 100% { filter: drop-shadow(0 0 2px #a7ce79aa); }
+      50% { filter: drop-shadow(0 0 12px #9cc54acc); }
+    }
+
+    nav {
+      display: flex;
+      gap: 24px;
+    }
+
+    nav a {
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 8px 12px;
+      border-radius: 8px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    nav a:hover, nav a:focus {
+      background-color: #a1c17bdd;
+      color: #1a2809;
+      outline-offset: 2px;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #7fa833, #b7dc4f);
+      padding: 12px 28px;
+      border-radius: 16px;
+      color: #1a2809;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      user-select: none;
+    }
+
+    .btn-primary:hover,
+    .btn-primary:focus {
+      box-shadow: 0 8px 20px #b7dc4fbb;
+      transform: scale(1.07);
+      outline-offset: 3px;
+    }
+
+    /* Hamburger and mobile nav */
+    .mobile-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: #b9d77f;
+      font-size: 2.4rem;
+      cursor: pointer;
+      padding: 8px;
+      user-select: none;
+    }
+
+    .mobile-nav {
+      display: none;
+      flex-direction: column;
+      background: rgba(34, 53, 22, 0.95);
+      backdrop-filter: saturate(150%) blur(10px);
+      position: absolute;
+      top: 64px;
+      right: 0;
+      width: 100%;
+      max-width: 280px;
+      padding: 24px 16px;
+      border-radius: 0 0 0 16px;
+      box-shadow: -4px 6px 20px rgba(0,0,0,0.8);
+      z-index: 150;
+    }
+
+    .mobile-nav a {
+      padding: 12px 16px;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 1.2rem;
+      color: #b9d77f;
+      margin-bottom: 10px;
+      user-select: none;
+    }
+
+    .mobile-nav a:hover,
+    .mobile-nav a:focus {
+      background-color: #a1c17bcc;
+      color: #1a2809;
+      outline-offset: 2px;
+    }
+
+    /* Hero section */
+    .hero {
+      padding: 128px 0 100px;
+      text-align: center;
+      position: relative;
+      overflow: visible;
+    }
+
+    .hero h1 {
+      font-size: 3.75rem;
+      font-weight: 800;
+      line-height: 1.1;
+      max-width: 720px;
+      margin: 0 auto 16px;
+      color: #d4e1be;
+      text-shadow: 0 0 5px #8da455bb;
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      color: #c7d1a6;
+      max-width: 600px;
+      margin: 0 auto 40px;
+      font-weight: 500;
+    }
+
+    /* Action buttons container */
+    .hero .actions {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    /* Content area main */
+    main {
+      flex: 1;
+      padding-bottom: 80px;
+    }
+
+    /* Section style */
+    section {
+      margin-bottom: 80px;
+    }
+
+    h2.section-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 32px;
+      color: #aecb7fff;
+      text-align: center;
+      text-shadow: 0 0 6px #6a884bcc;
+    }
+
+    /* Services grid */
+    .services {
+      display: grid;
+      gap: 32px;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      padding: 0 16px;
+    }
+
+    .service-card {
+      background: rgba(66, 91, 42, 0.6);
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.7);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      color: #d6e4a8;
+    }
+
+    .service-card:hover,
+    .service-card:focus-within {
+      transform: translateY(-8px);
+      box-shadow: 0 14px 28px #aedc7fdd;
+      outline: none;
+    }
+
+    .service-card img {
+      border-radius: 14px;
+      object-fit: cover;
+      height: 160px;
+      width: 100%;
+      user-select: none;
+    }
+
+    .service-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #c9e29c;
+      margin: 4px 0;
+    }
+
+    .service-description {
+      font-size: 1rem;
+      color: #cad5aa;
+      flex-grow: 1;
+    }
+
+    .price {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: #d3edb6;
+    }
+
+    /* Articles/content block */
+    .content-block {
+      background: rgba(52, 69, 29, 0.6);
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.6);
+      max-width: 900px;
+      margin: 0 auto 48px;
+      color: #ccd7a9;
+      line-height: 1.7;
+      font-size: 1rem;
+      font-weight: 500;
+      text-align: justify;
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+    }
+
+    .content-subsection {
+      margin-bottom: 32px;
+    }
+    .content-subsection h3 {
+      margin-top: 0;
+      font-weight: 700;
+      color: #a7c47f;
+      font-size: 1.5rem;
+      margin-bottom: 12px;
+      text-shadow: 0 0 4px #567131cc;
+    }
+
+    /* Images gallery grid */
+    .image-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+      margin: 0 auto 64px;
+      max-width: 1100px;
+      padding: 0 16px;
+    }
+
+    /* Disclaimer and address footers */
+    footer {
+      background: #1c2b11;
+      padding: 32px 24px;
+      color: #99a67d;
+      font-size: 0.9rem;
+      user-select: none;
+      text-align: center;
+      border-top: 1px solid #38511d;
+    }
+    footer address {
+      font-style: normal;
+      margin-top: 12px;
+      font-weight: 600;
+      color: #b7d186;
+    }
+
+    /* Customer satisfaction banner */
+    .customer-satisfaction {
+      background: linear-gradient(45deg, #739a3dcc, #a4d970cc);
+      padding: 28px 16px;
+      border-radius: 20px;
+      max-width: 1000px;
+      margin: -60px auto 80px;
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: #1f3207;
+      text-align: center;
+      box-shadow: 0 8px 25px #86c252cc;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      user-select: none;
+    }
+
+    .material-symbols-outlined.check-icon {
+      font-size: 2.3rem;
+      color: #2e5f00;
+      filter: drop-shadow(0 0 2px #8ee245cc);
+    }
+
+    /* Special tree icon effect */
+    .tree-icon {
+      color: #9fcc65;
+      font-size: 2.8rem;
+      text-shadow: 0 0 6px #a1cd6eaa, 0 0 14px #7baf39;
+      display: inline-block;
+      transform-origin: center bottom;
+      animation: treeSway 6s ease-in-out infinite;
+      margin-right: 8px;
+      user-select: none;
+    }
+
+    @keyframes treeSway {
+      0%, 100% { transform: rotate(0deg); }
+      50% { transform: rotate(3deg); }
+    }
+
+    /* Responsive breakpoints */
+
+    /* Mobile <=767px */
+    @media (max-width: 767px) {
+      .header-container {
+        padding: 12px 16px;
+      }
+      nav {
+        display: none;
+      }
+      .mobile-toggle {
+        display: inline-block;
+      }
+      .mobile-nav.show {
+        display: flex;
+      }
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+      .hero p {
+        margin-bottom: 32px;
+        font-size: 1.1rem;
+      }
+      .services {
+        grid-template-columns: 1fr;
+        padding: 0;
+        gap: 24px;
+      }
+      .image-gallery {
+        grid-template-columns: 1fr;
+      }
+      .customer-satisfaction {
+        margin: -40px 20px 48px;
+        font-size: 1.1rem;
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+
+    /* Tablet 768-1023px */
+    @media (min-width: 768px) and (max-width: 1023px) {
+      .services {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 12px;
+      }
+      .image-gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* Desktop 1024-1439px */
+    @media (min-width: 1024px) and (max-width: 1439px) {
+      .services {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .image-gallery {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .hero h1 {
+        font-size: 3.75rem;
+      }
+    }
+
+    /* Large Desktop 1440px+ */
+    @media (min-width: 1440px) {
+      main {
+        padding-left: 40px;
+        padding-right: 40px;
+      }
+      .services {
+        grid-template-columns: repeat(4, 1fr);
+      }
+      .image-gallery {
+        grid-template-columns: repeat(4, 1fr);
+      }
+      .hero h1 {
+        font-size: 4.25rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-container" role="banner">
+      <a href="#home" class="logo" aria-label="Leafora Garden Designs homepage">
+        <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="currentColor" aria-hidden="true" focusable="false">
+          <path d="M32 2C14 2 2 18 2 34c0 14 14 28 30 28 16 0 30-14 30-28 0-16-14-32-30-32zM22 28c.7-2 2.3-4.6 5-6 2-1 4-1 6-1 1 0 3-2 4-2s2 1 2 2c0 3-3 8-10 11-1.3.4-4 1-7 1-2 0-3-2-3-5 0-3 4-3 4-3z" />
+        </svg>
+        Leafora
+      </a>
+      <nav role="navigation" aria-label="Primary navigation">
+        <a href="index.html" tabindex="0"aria-current="page">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy</a>
+        <a href="terms.html" tabindex="0">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0">Cookies</a>
+        <a href="contact.html" tabindex="0">Contact us</a>
+      </nav>
+      <button aria-label="Toggle menu" class="mobile-toggle" id="mobileToggle" aria-expanded="false" aria-controls="mobileMenu">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </div>
+    <nav class="mobile-nav" id="mobileMenu" aria-label="Mobile primary navigation" hidden>
+      <a href="index.html" tabindex="0"aria-current="page">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy</a>
+        <a href="terms.html" tabindex="0">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0">Cookies</a>
+        <a href="contact.html" tabindex="0">Contact us</a>
+    </nav>
+  </header>
+
+  <main role="main">
+    <section class="hero" id="home" tabindex="0" aria-label="Welcome section">
+      <h1><span class="tree-icon material-symbols-outlined">park</span> Leafora Garden Designs</h1>
+      <p>Bringing nature’s beauty into your space with expert garden design and forestry solutions. Transform your outdoor or indoor garden into a lush, sustainable haven.</p>
+      <div class="actions">
+        <a href="#services" class="btn-primary" role="button">Explore Our Services</a>
+        <a href="#contact" class="btn-primary" role="button">Get a Free Quote</a>
+      </div>
+    </section>
+
+    <section id="services" aria-label="Our Garden Design Services" tabindex="0">
+      <h2 class="section-title">Our Services & Pricing</h2>
+      <div class="services" role="list">
+        <article class="service-card" role="listitem" tabindex="0" aria-label="Custom garden design service">
+          <img src="s1.jpeg" alt="Photo of a beautifully designed custom garden with trees and flowers" />
+          <h3 class="service-title">Custom Garden Design</h3>
+          <p class="service-description">Tailor-made garden designs that reflect your style with expert planning, plant selection, and sustainable landscaping.</p>
+          <p class="price" aria-label="Starting at $1500">Starting at $1,500</p>
+        </article>
+
+        <article class="service-card" role="listitem" tabindex="0" aria-label="Tree planting and forestry management">
+          <img src="s2.jpeg" alt="Workers planting young trees in a forested garden landscape" />
+          <h3 class="service-title">Tree Planting & Forestry Management</h3>
+          <p class="service-description">Professional tree planting, care, and maintenance to promote long-lasting forested environments and healthy ecosystems.</p>
+          <p class="price" aria-label="Starting at $800">Starting at $800</p>
+        </article>
+
+        <article class="service-card" role="listitem" tabindex="0" aria-label="Landscape revitalization service">
+          <img src="s3.jpg" alt="Revitalized garden landscape with lush green trees and freshly cut grass" />
+          <h3 class="service-title">Landscape Revitalization</h3>
+          <p class="service-description">Renew your garden with expert pruning, new planting, soil improvement, and sustainable landscaping techniques.</p>
+          <p class="price" aria-label="Starting at $1200">Starting at $1,200</p>
+        </article>
+
+        <article class="service-card" role="listitem" tabindex="0" aria-label="Garden consultation and planning">
+          <img src="s4.jpeg" alt="Consultant discussing garden plans with client outdoors surrounded by trees" />
+          <h3 class="service-title">Garden Consultation & Planning</h3>
+          <p class="service-description">Expert advice and planning services customized to your space, budget, and aesthetic preferences.</p>
+          <p class="price" aria-label="Starting at $300">Starting at $300</p>
+        </article>
+
+        <article class="service-card" role="listitem" tabindex="0" aria-label="Seasonal garden maintenance service">
+          <img src="s5.jpeg" alt="Gardener performing seasonal maintenance in a wooded garden setting" />
+          <h3 class="service-title">Seasonal Garden Maintenance</h3>
+          <p class="service-description">Keep your garden vibrant year-round with pruning, fertilizing, pest control, and planting services.</p>
+          <p class="price" aria-label="Starting at $400 per season">$400 per season</p>
+        </article>
+
+        <article class="service-card" role="listitem" tabindex="0" aria-label="Eco-friendly irrigation system installation">
+          <img src="s6.jpg" alt="Eco-friendly garden irrigation system piping among forest plants" />
+          <h3 class="service-title">Eco-Friendly Irrigation Systems</h3>
+          <p class="service-description">Sustainable irrigation solutions to conserve water while nurturing your garden’s growth.</p>
+          <p class="price" aria-label="Starting at $1000">Starting at $1,000</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="gallery" aria-label="Gallery of Garden and Forestry Designs" tabindex="0">
+      <h2 class="section-title">Gallery</h2>
+      <div class="image-gallery">
+        <img src="g1.jpeg" alt="Meandering path through a dense forest garden with tall trees and stone edging" />
+        <img src="g2.jpg" alt="View upwards of lush green tree canopy letting dappled sunlight through" />
+        <img src="g3.jpeg" alt="Naturalistic water feature surrounded by shrubs and moss-covered rocks" />
+        <img src="g4.jpeg" alt="Flower garden vibrant with blooming plants and wooden fences" />
+        <img src="g5.jpeg" alt="Compact urban garden with diverse native trees and green plants" />
+        <img src="g6.jpg" alt="Professional gardener performing careful pruning on a mature tree" />
+        <img src="g7.jpeg" alt="Sustainable garden design with compost, rainwater collection, and native plants" />
+        <img src="g8.jpeg" alt="Evening lighting highlighting trees and garden pathways" />
+        <img src="g9.jpeg" alt="Garden area with birdhouses, flowering plants, and a pond for wildlife" />
+        <img src="g10.jpeg" alt="Seasonally transitioning garden with colorful autumn leaves and greenery" />
+      </div>
+    </section>
+
+    <section id="about" aria-label="About Leafora Garden Designs" tabindex="0">
+      <h2 class="section-title">About Leafora</h2>
+      <div class="content-block" style="max-height: 600px; overflow-y: auto;">
+        <p>Leafora Garden Designs is dedicated to bringing the beauty and tranquility of nature to your living spaces through expert garden design and forestry services. Our team specializes in sustainable, custom tailored projects that incorporate native and exotic species, innovative landscaping, and ecological stewardship. Whether you desire a peaceful home garden, a vibrant urban green space, or a professionally managed forested area, Leafora is your trusted partner.</p>
+        <p>Our holistic approach blends art and science, combining in-depth knowledge of soil health, irrigation, native flora, and aesthetic principles. We pride ourselves on customer satisfaction and meticulous attention to detail in every project. Leafora’s mission is to help you connect deeply with nature, enhancing your outdoor experience and increasing your property’s value sustainably.</p>
+        <p>We believe that every garden tells a story, and this story should nurture not only the environment but also your lifestyle. Through careful selection of plants, innovative irrigation, and eco-friendly management techniques, Leafora has transformed hundreds of gardens into thriving ecosystems and personal sanctuaries. Our ongoing commitment is to exceed expectations with custom solutions that bring harmony between human habitat and the natural world.</p>
+        <p>Our experienced team brings decades of multidisciplinary expertise in horticulture, landscape architecture, and native forestry — providing robust solutions for any climate zone, soil condition, or spatial constraint. From small urban balconies to sprawling estates and commercial developments, our designs fuse sustainability with breathtaking beauty.</p>
+        <p>Leafora is also deeply involved in community education and outreach, empowering individuals with knowledge through workshops, resources, and personalized consultation. We want every client to become a confident steward of their own green spaces.</p>
+        <p>Let us guide you through the art and science of garden creation and forestry care. Explore our extensive knowledge base, innovative projects, and join the movement toward a greener, healthier planet — starting in your own backyard.</p>
+        <p>Whether you are starting fresh or revitalizing an existing property, trust Leafora Garden Designs to deliver a garden that reflects your values, is ecologically sound, and offers years of joy and inspiration.</p>
+        <p>We invite you to read through our comprehensive garden design insights below to learn about best practices, trends, and sustainable approaches that can help you realize your dream garden.</p>
+      </div>
+    </section>
+
+    <section id="garden-insights" aria-label="Garden Design Insights" tabindex="0">
+      <h2 class="section-title">Garden Design Insights</h2>
+      <div class="content-block">
+        <div class="content-subsection">
+          <h3>Understanding Your Local Ecosystem</h3>
+          <p>Successful garden design begins with a thorough understanding of the local ecosystem. Soil type, climate, native flora, and wildlife all influence what plants and materials will thrive in your garden. Leafora’s team evaluates these factors carefully to create a garden that flourishes naturally and requires minimal artificial inputs.</p>
+          <p>By working with native plants and trees, you encourage biodiversity, provide habitat for local animals, and reduce water and maintenance demands. Native species are also more resilient to pests and disease, making your garden healthier and more sustainable in the long term.</p>
+        </div>
+
+        <div class="content-subsection">
+          <h3>Sustainable Water Management</h3>
+          <p>Efficient and sustainable irrigation is key to maintaining a healthy garden with minimal environmental impact. We incorporate rainwater harvesting systems, drip irrigation, and smart controllers to ensure your garden receives just the right amount of water without waste.</p>
+          <p>Our irrigation solutions are designed to complement natural rainfall patterns and soil moisture retention, reducing reliance on municipal water resources and lowering your utility bills.</p>
+        </div>
+
+        <div class="content-subsection">
+          <h3>Integrating Garden Structures</h3>
+          <p>Incorporating functional and aesthetic structures like pergolas, retaining walls, and pathways enhances garden usability and visual appeal. Leafora designs these elements using natural materials like wood, stone, and bamboo to blend seamlessly with the landscape.</p>
+          <p>Careful placement of garden lights and seating areas creates outdoor living spaces that invite relaxation and socializing while highlighting garden features at day and night.</p>
+        </div>
+
+        <div class="content-subsection">
+          <h3>Seasonal Planting and Maintenance</h3>
+          <p>Gardens change with the seasons, and planning for seasonal variation adds year-round interest to your landscape. Leafora recommends a mix of evergreen and deciduous plants, flowering annuals, and perennial shrubs for continuous color, texture, and life.</p>
+          <p>Scheduled maintenance visits ensure pruning, mulching, fertilization, and pest control are applied at the optimal time, preserving your garden’s beauty and health throughout the year.</p>
+        </div>
+
+        <div class="content-subsection">
+          <h3>Wildlife-Friendly Gardens</h3>
+          <p>Gardens designed to support local wildlife add ecological value and create an immersive natural experience. Bird feeders, insect hotels, pollinator-friendly plants, and water features foster biodiversity and help threatened species thrive.</p>
+          <p>Leafora incorporates these elements thoughtfully to benefit both your garden’s ecosystem and your enjoyment as a garden enthusiast.</p>
+        </div>
+
+        <!-- New points and topics added below -->
+
+        <div class="content-subsection">
+          <h3>Soil Health and Nutrient Management</h3>
+          <p>Healthy soil is the foundation of a vibrant garden. Leafora conducts comprehensive soil tests and recommends organic amendments like compost, mulches, and natural fertilizers to improve fertility and structure.</p>
+          <p>Balancing soil pH and maintaining microbial life enhances nutrient availability to plants and strengthens their immunity against disease.</p>
+        </div>
+
+        <div class="content-subsection">
+          <h3>Selecting Plants for Climate Resilience</h3>
+          <p>With increasingly unpredictable weather patterns, choosing plants adapted to your region’s climate is more important than ever. We prioritize drought-tolerant, heat-resistant, and flood-resilient species to ensure your garden can withstand environmental stresses.</p>
+          <p>Proper plant selection reduces water use, maintenance effort, and replacement costs, creating a sustainable and enduring landscape.</p>
+        </div>
+
+        <div class="content-subsection">
+          <h3>Garden Technology and Automation</h3>
+          <p>Leafora embraces modern technology to streamline garden care. Automated irrigation, smart lighting, and environmental sensors allow precise control and monitoring that optimize plant health and conserve resources.</p>
+          <p>Integrated smartphone apps enable you to remotely manage your garden’s environment and maintenance schedules for peace of mind and convenience.</p>
+        </div>
+
+        <div class="content-subsection">
+          <h3>Eco-Friendly Materials and Practices</h3>
+          <p>Our designs utilize sustainably sourced materials like reclaimed wood, recycled stone, and low-impact concrete. We avoid harmful chemicals and promote organic pest management techniques that protect beneficial insects and soil life.</p>
+          <p>By choosing eco-friendly practices, Leafora helps clients reduce their carbon footprint and create gardens that respect nature’s balance.</p>
+        </div>
+
+        <div class="content-subsection">
+          <h3>Creating Outdoor Living Spaces</h3>
+          <p>Gardens today often double as outdoor living rooms, kitchens, and entertainment areas. We design spaces with comfortable seating, weatherproof furnishings, outdoor kitchens, fire pits, and water features that enhance usability and ambience.</p>
+          <p>Thoughtful layout and lighting make these spaces inviting day and night, extending your home’s living area into nature.</p>
+        </div>
+
+        <div class="content-subsection">
+          <h3>Climate Adaptation and Carbon Sequestration</h3>
+          <p>Leafora promotes gardens that not only beautify spaces but combat climate change by sequestering carbon through trees and perennial plants. Our designs include planting plans focused on maximizing carbon capture and supporting resilient ecosystems.</p>
+          <p>We also help clients adapt their gardens to changing local climates through diverse species selection, sustainable water management, and erosion control strategies.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="disclaimer" aria-label="Website Disclaimer" tabindex="0">
+      <h2 class="section-title">Disclaimer</h2>
+      <div class="content-block" style="max-width: 850px; margin: 0 auto;">
+        <p>The content provided on this Leafora Garden Designs website is for informational and illustrative purposes only. While we strive to keep the information accurate, complete, and up-to-date, Leafora does not guarantee the reliability or suitability of the content for your individual needs. Gardening and forestry outcomes may vary depending on local climate, soil conditions, plant species, and maintenance practices.</p>
+        <p>Before undertaking any garden design or landscaping project, please consult with our professionals for personalized advice and evaluation. Leafora Garden Designs is not liable for any damages or losses resulting from using the information or services presented here.</p>
+      </div>
+    </section>
+
+    <section class="customer-satisfaction" aria-label="Customer satisfaction statement" tabindex="0">
+      <span class="material-symbols-outlined check-icon" aria-hidden="true">check_circle</span>
+      <span>Our commitment to you: <strong>Increasing Customer Satisfaction with Every Garden We Design.</strong> Trusted by hundreds of delighted clients for transforming visions into breathtaking realities.</span>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="container">
+      <p>© 2024 Leafora Garden Designs. All rights reserved.</p>
+      <address>
+        East 14th Street, New York, NY 10003, United States
+      </address>
+      <span class="phone">Phone: +1-855-755-0199</span>
+    </div>
+  </footer>
+
+  <script>
+    const mobileToggle = document.getElementById('mobileToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    mobileToggle.addEventListener('click', () => {
+      const expanded = mobileToggle.getAttribute('aria-expanded') === 'true';
+      if (expanded) {
+        mobileMenu.hidden = true;
+        mobileToggle.setAttribute('aria-expanded', 'false');
+        mobileMenu.classList.remove('show');
+      } else {
+        mobileMenu.hidden = false;
+        mobileToggle.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.add('show');
+      }
+    });
+
+    // Close mobile menu on resize above mobile breakpoint
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 767) {
+        mobileMenu.hidden = true;
+        mobileMenu.classList.remove('show');
+        mobileToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  </script>
+</body>
+</html>
+

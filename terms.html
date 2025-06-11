@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Terms and Conditions - Leafora Garden Designs</title>
+  <!-- Material Symbols Icon font -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <style>
+    /* Reset and base */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+        Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      background: linear-gradient(135deg, #203720 0%, #335433 70%, #1f3522 100%);
+      color: #d0e8c6;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    a {
+      color: #a1c17b;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    a:hover,
+    a:focus {
+      color: #7da755;
+      outline: none;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      width: 100%;
+    }
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(34, 53, 22, 0.85);
+      backdrop-filter: saturate(150%) blur(8px);
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.6);
+    }
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .logo {
+      font-weight: 800;
+      font-size: 2rem;
+      letter-spacing: 0.12em;
+      color: #b9d77f;
+      display: flex;
+      align-items: center;
+      user-select: none;
+    }
+    .logo-icon {
+      margin-right: 8px;
+      fill: #a6c972;
+      width: 40px;
+      height: 40px;
+      animation: logoPulse 4s infinite ease-in-out;
+    }
+    @keyframes logoPulse {
+      0%, 100% { filter: drop-shadow(0 0 2px #a7ce79aa); }
+      50% { filter: drop-shadow(0 0 12px #9cc54acc); }
+    }
+    nav {
+      display: flex;
+      gap: 24px;
+    }
+    nav a {
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 8px 12px;
+      border-radius: 8px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    nav a:hover, nav a:focus {
+      background-color: #a1c17bdd;
+      color: #1a2809;
+      outline-offset: 2px;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #7fa833, #b7dc4f);
+      padding: 12px 28px;
+      border-radius: 16px;
+      color: #1a2809;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      user-select: none;
+    }
+    .btn-primary:hover,
+    .btn-primary:focus {
+      box-shadow: 0 8px 20px #b7dc4fbb;
+      transform: scale(1.07);
+      outline-offset: 3px;
+    }
+    .mobile-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: #b9d77f;
+      font-size: 2.4rem;
+      cursor: pointer;
+      padding: 8px;
+      user-select: none;
+    }
+    .mobile-nav {
+      display: none;
+      flex-direction: column;
+      background: rgba(34, 53, 22, 0.95);
+      backdrop-filter: saturate(150%) blur(10px);
+      position: absolute;
+      top: 64px;
+      right: 0;
+      width: 100%;
+      max-width: 280px;
+      padding: 24px 16px;
+      border-radius: 0 0 0 16px;
+      box-shadow: -4px 6px 20px rgba(0,0,0,0.8);
+      z-index: 150;
+    }
+    .mobile-nav a {
+      padding: 12px 16px;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 1.2rem;
+      color: #b9d77f;
+      margin-bottom: 10px;
+      user-select: none;
+    }
+    .mobile-nav a:hover,
+    .mobile-nav a:focus {
+      background-color: #a1c17bcc;
+      color: #1a2809;
+      outline-offset: 2px;
+    }
+    main {
+      flex: 1;
+      padding: 80px 24px 64px;
+      max-width: 900px;
+      margin: 0 auto;
+      color: #ccd7a9;
+      font-size: 1rem;
+      line-height: 1.7;
+      font-weight: 500;
+      user-select: text;
+    }
+    main h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      text-align: center;
+      color: #aecb7f;
+      margin-bottom: 24px;
+      text-shadow: 0 0 8px #6a8800bb;
+    }
+    main h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-top: 48px;
+      margin-bottom: 16px;
+      color: #a5b97a;
+      text-shadow: 0 0 5px #536923bb;
+    }
+    main p {
+      margin-bottom: 1.4em;
+    }
+    main ul {
+      margin-left: 1.5em;
+      margin-bottom: 1.4em;
+      list-style-type: disc;
+    }
+    main ul li {
+      margin-bottom: 0.6em;
+    }
+    footer {
+      background: #1c2b11;
+      padding: 24px;
+      color: #99a67d;
+      font-size: 0.9rem;
+      user-select: none;
+      text-align: center;
+      border-top: 1px solid #38511d;
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+    footer address {
+      font-style: normal;
+      font-weight: 600;
+      color: #b7d186;
+    }
+    footer .phone {
+      font-weight: 600;
+      color: #b7d186;
+    }
+    /* Responsive */
+    @media (max-width: 767px) {
+      .mobile-toggle {
+        display: inline-block;
+      }
+      nav {
+        display: none;
+      }
+      main {
+        padding: 64px 16px 48px;
+      }
+    }
+    @media (min-width: 768px) {
+      .mobile-nav {
+        display: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="header-container" role="banner">
+    <a href="index.html" class="logo" aria-label="Leafora Garden Designs homepage">
+      <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="currentColor" aria-hidden="true" focusable="false">
+        <path d="M32 2C14 2 2 18 2 34c0 14 14 28 30 28 16 0 30-14 30-28 0-16-14-32-30-32zM22 28c.7-2 2.3-4.6 5-6 2-1 4-1 6-1 1 0 3-2 4-2s2 1 2 2c0 3-3 8-10 11-1.3.4-4 1-7 1-2 0-3-2-3-5 0-3 4-3 4-3z" />
+      </svg>
+      Leafora
+    </a>
+    <nav role="navigation" aria-label="Primary navigation">
+     <a href="index.html" tabindex="0">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy</a>
+        <a href="terms.html" tabindex="0"aria-current="page">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0">Cookies</a>
+        <a href="contact.html" tabindex="0">Contact us</a>
+    </nav>
+    <button aria-label="Toggle menu" class="mobile-toggle" id="mobileToggle" aria-expanded="false" aria-controls="mobileMenu">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+  </div>
+  <nav class="mobile-nav" id="mobileMenu" aria-label="Mobile primary navigation" hidden>
+    <a href="index.html" tabindex="0">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy</a>
+        <a href="terms.html" tabindex="0"aria-current="page">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0">Cookies</a>
+        <a href="contact.html" tabindex="0">Contact us</a>
+  </nav>
+</header>
+
+<main role="main" aria-label="Terms and conditions content">
+
+  <h1>Terms and Conditions</h1>
+
+  <h2>1. Introduction</h2>
+  <p>Welcome to Leafora Garden Designs. These Terms and Conditions govern your use of our website and services. By using our website or services, you agree to comply with and be bound by these Terms.</p>
+  
+  <h2>2. Use of Services</h2>
+  <p>You agree to use our services only for lawful purposes and in a way that does not infringe the rights of others or restrict or inhibit their use of our services.</p>
+  
+  <h2>3. Intellectual Property</h2>
+  <p>All content, logos, graphics, designs, and materials on this site are the intellectual property of Leafora Garden Designs or its licensors. You may not reproduce, distribute, or otherwise use any content without our written permission.</p>
+  
+  <h2>4. User Accounts and Security</h2>
+  <p>If you create an account with us, you are responsible for maintaining the confidentiality of your login credentials and for all activities that occur under your account.</p>
+  
+  <h2>5. Payment and Pricing</h2>
+  <p>All service prices listed are subject to change without prior notice. Payment is due promptly when services are rendered or as otherwise agreed.</p>
+  
+  <h2>6. Cancellation and Refunds</h2>
+  <p>Cancellation policies vary by service. Please review cancellation terms applicable to your purchase. Refunds are at the sole discretion of Leafora Garden Designs.</p>
+  
+  <h2>7. Limitation of Liability</h2>
+  <p>Leafora Garden Designs is not liable for any damages arising from the use or inability to use our services, including but not limited to direct, indirect, incidental, or consequential damages.</p>
+
+  <h2>8. Indemnification</h2>
+  <p>You agree to indemnify and hold harmless Leafora Garden Designs and its affiliates against any claims, damages, or expenses arising from your misuse of our services or violation of these Terms.</p>
+
+  <h2>9. Governing Law</h2>
+  <p>These Terms are governed by and construed in accordance with the laws of the State of New York, United States, without regard to conflict of law provisions.</p>
+
+  <h2>10. Changes to Terms</h2>
+  <p>We may modify these Terms at any time by posting updated Terms on our website. Your continued use of the services after modifications constitutes your acceptance of the new terms.</p>
+
+  <h2>11. Entire Agreement</h2>
+  <p>These Terms constitute the entire agreement between you and Leafora Garden Designs relating to your use of our services.</p>
+
+  <h2>12. Service Descriptions</h2>
+  <p>Leafora Garden Designs provides expert landscaping, garden design, forestry management, and maintenance services. Specific services, including custom consultations, tree planting, and irrigation installation, are detailed on our website.</p>
+  <p>We strive to update our service descriptions regularly to reflect new offerings and improvements.</p>
+
+  <h2>13. Customer Obligations</h2>
+  <p>Customers agree to provide accurate information, access to property as needed, and timely responses to communications for service delivery. Failure to do so may result in delays or service cancellations.</p>
+
+  <h2>14. Warranty Disclaimer</h2>
+  <p>All services are provided "as is" without any warranties, either express or implied, including warranties of merchantability or fitness for a particular purpose.</p>
+
+  <h2>15. Privacy</h2>
+  <p>Our Privacy Policy governs the collection and use of your personal information, available on the Privacy Policy page. By using our services, you consent to the practices described therein.</p>
+
+  <h2>16. Third-Party Services</h2>
+  <p>From time to time, Leafora may use third-party suppliers to support service delivery. We are not responsible for actions or omissions of such third parties.</p>
+
+  <h2>17. User Content</h2>
+  <p>Any content you submit, including photos or testimonials, must be your original work or used with permission. You grant Leafora a license to use submitted content for marketing and promotional purposes.</p>
+
+  <h2>18. Dispute Resolution</h2>
+  <p>Any disputes arising under these Terms shall be first attempted to be resolved through good faith negotiation. If unresolved, disputes shall be resolved by binding arbitration in New York.</p>
+
+  <h2>19. Severability</h2>
+  <p>If any provision of these Terms is found invalid or unenforceable, the remaining provisions shall remain effective.</p>
+
+  <h2>20. Waiver</h2>
+  <p>Failure to enforce any provision of these Terms does not constitute a waiver of our rights under the Terms.</p>
+
+  <h2>21. Customer Responsibilities Regarding Site Access</h2>
+  <p>Clients are responsible for ensuring suitable and safe access is provided for our staff and subcontractors where applicable. Providing accurate information about the site and restrictions will help us serve you efficiently.</p>
+
+  <h2>22. Limitation on Damages</h2>
+  <p>Notwithstanding any damages you might incur, our aggregate liability under these Terms for any claims whatsoever shall not exceed the total amount paid by you to Leafora Garden Designs in the 12 months prior to the claim.</p>
+
+  <h2>23. Amendments to Services</h2>
+  <p>Leafora Garden Designs reserves the right to amend, modify, or discontinue any service at any time without notice. Such changes may be due to regulatory requirements, availability, or other factors.</p>
+
+  <h2>24. Extended Disclaimer</h2>
+  <p>We strive for accuracy in all information on our website and communications but do not warrant completeness or fitness for any particular use. Landscaping and gardening involve natural variables and outcomes may vary.</p>
+
+  <h2>25. Licensing Conditions</h2>
+  <p>Use of any proprietary materials, including plans, blueprints, or documents provided by Leafora, is subject to license agreements that restrict copying, distribution, or resale without our consent.</p>
+
+  <h2>26. Insurance and Liability</h2>
+  <p>Leafora Garden Designs maintains insurance coverage appropriate to industry standards. We recommend clients verify their own insurance for liability during on-site work.</p>
+
+  <h2>27. Force Majeure</h2>
+  <p>We are not liable for failure to perform obligations caused by circumstances beyond our reasonable control, including natural disasters, acts of government, strikes, or pandemics.</p>
+
+  <h2>28. Governing Law and Jurisdiction</h2>
+  <p>Any disputes shall be governed by New York law and subject to exclusive jurisdiction of courts in New York County.</p>
+
+  <h2>29. Feedback and Communications</h2>
+  <p>Any feedback or ideas submitted to Leafora become our property and may be used without restriction. We appreciate your contributions and feedback.</p>
+
+  <h2>30. Termination of Service</h2>
+  <p>We reserve the right to terminate service contracts with customers for breach or violation of terms, at our sole discretion.</p>
+
+  <h2>31. Payment Terms and Invoicing</h2>
+  <p>Invoices are payable within the specified terms on each invoice. Late payments may incur fees or interest as detailed on invoices.</p>
+
+  <h2>32. Warranty and Maintenance Services</h2>
+  <p>Warranty coverage on completed projects and materials, if any, is detailed in service agreements. Maintenance services may be offered separately.</p>
+
+  <h2>33. Intellectual Property Indemnity</h2>
+  <p>Clients agree to indemnify Leafora for third-party intellectual property claims arising from designs or materials provided by the client.</p>
+
+  <h2>34. Governing Language</h2>
+  <p>In case of discrepancies, the English version of these Terms shall prevail.</p>
+
+  <h2>35. Contact Information</h2>
+  <p>For questions regarding these Terms, please contact us:</p>
+  <p><strong>Email:</strong> terms@leaforagarden.com</p>
+  <p><strong>Phone:</strong> +1-855-755-0199</p>
+  <p><strong>Address:</strong> East 14th Street, New York, NY 10003, United States</p>
+
+  <!-- Additional repeat sections to simulate extensive content -->
+  <h2>36. Definitions</h2>
+  <p>Definitions of key terms used in these Terms and Conditions, including "Client," "Services," "Agreement," and "Intellectual Property."</p>
+
+  <h2>37. Assignment</h2>
+  <p>Leafora may assign or subcontract any rights or obligations under these Terms without your prior consent.</p>
+
+  <h2>38. Third-Party Beneficiaries</h2>
+  <p>These Terms do not confer any rights on third parties except as expressly stated.</p>
+
+  <h2>39. Survival</h2>
+  <p>Provisions that by their nature survive termination or expiration shall continue in full force and effect.</p>
+
+  <h2>40. Headings</h2>
+  <p>Headings are for convenience only and shall not affect interpretation.</p>
+
+  <!-- Repeat sections as needed for volume -->
+
+</main>
+
+<footer role="contentinfo">
+  <div class="container">
+    <address>
+      East 14th Street, New York, NY 10003, United States
+    </address>
+    <span class="phone">Phone: +1-855-755-0199</span>n>
+  </div>
+</footer>
+
+<script>
+  const mobileToggle = document.getElementById('mobileToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  mobileToggle.addEventListener('click', () => {
+    const expanded = mobileToggle.getAttribute('aria-expanded') === 'true';
+    if (expanded) {
+      mobileMenu.hidden = true;
+      mobileToggle.setAttribute('aria-expanded', 'false');
+      mobileMenu.classList.remove('show');
+    } else {
+      mobileMenu.hidden = false;
+      mobileToggle.setAttribute('aria-expanded', 'true');
+      mobileMenu.classList.add('show');
+    }
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 767) {
+      mobileMenu.hidden = true;
+      mobileMenu.classList.remove('show');
+      mobileToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Us - Leafora Garden Designs</title>
+  <!-- Material Symbols Icon font -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <style>
+    /* Reset and base */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+        Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      background: linear-gradient(135deg, #203720 0%, #335433 70%, #1f3522 100%);
+      color: #d0e8c6;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    a {
+      color: #a1c17b;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    a:hover,
+    a:focus {
+      color: #7da755;
+      outline: none;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      width: 100%;
+    }
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(34, 53, 22, 0.85);
+      backdrop-filter: saturate(150%) blur(8px);
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.6);
+    }
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .logo {
+      font-weight: 800;
+      font-size: 2rem;
+      letter-spacing: 0.12em;
+      color: #b9d77f;
+      display: flex;
+      align-items: center;
+      user-select: none;
+    }
+    .logo-icon {
+      margin-right: 8px;
+      fill: #a6c972;
+      width: 40px;
+      height: 40px;
+      animation: logoPulse 4s infinite ease-in-out;
+    }
+    @keyframes logoPulse {
+      0%, 100% { filter: drop-shadow(0 0 2px #a7ce79aa); }
+      50% { filter: drop-shadow(0 0 12px #9cc54acc); }
+    }
+    nav {
+      display: flex;
+      gap: 24px;
+    }
+    nav a {
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 8px 12px;
+      border-radius: 8px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    nav a:hover, nav a:focus {
+      background-color: #a1c17bdd;
+      color: #1a2809;
+      outline-offset: 2px;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #7fa833, #b7dc4f);
+      padding: 12px 28px;
+      border-radius: 16px;
+      color: #1a2809;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      user-select: none;
+    }
+    .btn-primary:hover,
+    .btn-primary:focus {
+      box-shadow: 0 8px 20px #b7dc4fbb;
+      transform: scale(1.07);
+      outline-offset: 3px;
+    }
+    .mobile-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: #b9d77f;
+      font-size: 2.4rem;
+      cursor: pointer;
+      padding: 8px;
+      user-select: none;
+    }
+    .mobile-nav {
+      display: none;
+      flex-direction: column;
+      background: rgba(34, 53, 22, 0.95);
+      backdrop-filter: saturate(150%) blur(10px);
+      position: absolute;
+      top: 64px;
+      right: 0;
+      width: 100%;
+      max-width: 280px;
+      padding: 24px 16px;
+      border-radius: 0 0 0 16px;
+      box-shadow: -4px 6px 20px rgba(0,0,0,0.8);
+      z-index: 150;
+    }
+    .mobile-nav a {
+      padding: 12px 16px;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 1.2rem;
+      color: #b9d77f;
+      margin-bottom: 10px;
+      user-select: none;
+    }
+    .mobile-nav a:hover,
+    .mobile-nav a:focus {
+      background-color: #a1c17bcc;
+      color: #1a2809;
+      outline-offset: 2px;
+    }
+    main {
+      flex: 1;
+      padding: 80px 24px 64px;
+      max-width: 900px;
+      margin: 0 auto;
+      color: #ccd7a9;
+      font-size: 1rem;
+      line-height: 1.7;
+      font-weight: 500;
+      user-select: text;
+    }
+    main h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      text-align: center;
+      color: #aecb7f;
+      margin-bottom: 24px;
+      text-shadow: 0 0 8px #6a8800bb;
+    }
+    main h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-top: 48px;
+      margin-bottom: 16px;
+      color: #a5b97a;
+      text-shadow: 0 0 5px #536923bb;
+    }
+    main h3 {
+      font-weight: 700;
+      margin-bottom: 12px;
+      margin-top: 24px;
+      color: #9ec76d;
+    }
+    main p {
+      margin-bottom: 1.4em;
+    }
+    main ul {
+      margin-left: 1.5em;
+      margin-bottom: 1.4em;
+      list-style-type: disc;
+    }
+    main ul li {
+      margin-bottom: 0.6em;
+    }
+    form {
+      background: rgba(66, 91, 42, 0.6);
+      padding: 24px;
+      border-radius: 16px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.7);
+      margin-bottom: 48px;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: #b9d77f;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px 14px;
+      border-radius: 12px;
+      border: none;
+      margin-bottom: 20px;
+      font-size: 1rem;
+      background: rgba(255,255,255,0.1);
+      color: #d0e8c6;
+      resize: vertical;
+    }
+    input::placeholder, textarea::placeholder {
+      color: #a1b57e;
+    }
+    button[type="submit"] {
+      display: inline-block;
+      font-weight: 700;
+      font-size: 1.1rem;
+      background: linear-gradient(135deg, #7fa833, #b7dc4f);
+      color: #1a2809;
+      border-radius: 16px;
+      border: none;
+      padding: 14px 36px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      user-select: none;
+    }
+    button[type="submit"]:hover,
+    button[type="submit"]:focus {
+      background-color: #96c74b;
+      transform: scale(1.05);
+      outline-offset: 3px;
+    }
+    footer {
+      background: #1c2b11;
+      padding: 24px;
+      color: #99a67d;
+      font-size: 0.9rem;
+      user-select: none;
+      text-align: center;
+      border-top: 1px solid #38511d;
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+    footer address {
+      font-style: normal;
+      font-weight: 600;
+      color: #b7d186;
+    }
+    footer .phone {
+      font-weight: 600;
+      color: #b7d186;
+    }
+    /* Responsive */
+    @media (max-width: 767px) {
+      .mobile-toggle {
+        display: inline-block;
+      }
+      nav {
+        display: none;
+      }
+      main {
+        padding: 64px 16px 48px;
+      }
+    }
+    @media (min-width: 768px) {
+      .mobile-nav {
+        display: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-container" role="banner">
+      <a href="index.html" class="logo" aria-label="Leafora Garden Designs homepage">
+        <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="currentColor" aria-hidden="true" focusable="false">
+          <path d="M32 2C14 2 2 18 2 34c0 14 14 28 30 28 16 0 30-14 30-28 0-16-14-32-30-32zM22 28c.7-2 2.3-4.6 5-6 2-1 4-1 6-1 1 0 3-2 4-2s2 1 2 2c0 3-3 8-10 11-1.3.4-4 1-7 1-2 0-3-2-3-5 0-3 4-3 4-3z" />
+        </svg>
+        Leafora
+      </a>
+      <nav role="navigation" aria-label="Primary navigation">
+       <a href="index.html" tabindex="0">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy</a>
+        <a href="terms.html" tabindex="0">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0">Cookies</a>
+        <a href="contact.html" tabindex="0"aria-current="page">Contact us</a>
+      </nav>
+      <button aria-label="Toggle menu" class="mobile-toggle" id="mobileToggle" aria-expanded="false" aria-controls="mobileMenu">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </div>
+    <nav class="mobile-nav" id="mobileMenu" aria-label="Mobile primary navigation" hidden>
+     <a href="index.html" tabindex="0">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy</a>
+        <a href="terms.html" tabindex="0">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0">Cookies</a>
+        <a href="contact.html" tabindex="0"aria-current="page">Contact us</a>
+    </nav>
+  </header>
+
+  <main role="main" aria-label="Contact page content">
+    <h1>Contact Leafora Garden Designs</h1>
+    <p>We would love to hear from you! Whether you have questions about our garden and forestry design services, want to request a quote, or need customer support, please use one of the following methods to reach out.</p>
+
+    <h2>Get In Touch</h2>
+    <p>Our team is here to assist you Monday through Friday, from 9 AM to 6 PM Eastern Time. We strive to respond to all inquiries within 24 hours.</p>
+
+    <h2>Contact Form</h2>
+    <form action="#" method="POST" aria-label="Contact form">
+      <label for="name">Full Name *</label>
+      <input type="text" id="name" name="name" placeholder="Your full name" required autocomplete="name" />
+      <label for="email">Email Address *</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email" />
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" placeholder="+1 212 555 0199" autocomplete="tel" />
+      <label for="message">Your Message *</label>
+      <textarea id="message" name="message" rows="6" placeholder="Write your message here..." required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+
+    <h2>Other Ways to Contact Us</h2>
+    <ul>
+      <li><strong>Phone:</strong> +1-855-755-0199</li>
+      <li><strong>Email:</strong> contact@leaforagarden.com</li>
+      <li><strong>Postal Address:</strong> East 14th Street, New York, NY 10003, United States</li>
+    </ul>
+
+    <h2>Visit Our Office</h2>
+    <p>We welcome visitors at our New York office by appointment. Please call ahead to schedule a meeting with one of our garden design experts.</p>
+
+    <h2>Frequently Asked Questions</h2>
+    <p>Below are some of the common questions we receive. For more assistance, please reach out using the contact form.</p>
+
+    <h3>What areas do you serve?</h3>
+    <p>Leafora Garden Designs primarily serves clients in the New York metropolitan area, including the surrounding states. For certain projects, we also offer remote consultation and design services.</p>
+
+    <h3>How long does a typical project take?</h3>
+    <p>Project durations vary widely depending on the scope and scale. A small garden redesign may take a few weeks, whereas full-scale landscaping and forestry projects can take several months.</p>
+
+    <h3>Can you work with sustainable and native plants?</h3>
+    <p>Absolutely! Sustainability is key to our design philosophy. We prioritize native plants and eco-friendly landscaping techniques.</p>
+
+    <h2>Service Inquiries</h2>
+    <p>Tell us about your garden design ideas and needs. Provide as much detail as possible including property size, style preferences, budget, and desired timeline. Our team will tailor a proposal to meet your vision.</p>
+
+    <h2>Support and Customer Care</h2>
+    <p>Our customer care team is available to assist with maintenance questions, service scheduling, and problem resolution. We believe in responsive and helpful support to keep your garden thriving.</p>
+
+    <h2>Consultation Requests</h2>
+    <p>Schedule a consultation with one of our experienced garden designers to get expert advice and personalized plans.</p>
+
+    <h2>Careers and Partnerships</h2>
+    <p>If you are interested in working with Leafora Garden Designs or forming a partnership, please contact our HR department or business development team.</p>
+
+    <h2>Media and Press</h2>
+    <p>For media inquiries, interviews, or press materials, please email our communications department at media@leaforagarden.com.</p>
+    
+    <h2>Client Testimonials and Feedback</h2>
+    <p>We appreciate your feedback to continuously improve our services. Share your experience to help us grow.</p>
+
+    <h2>Community Engagement</h2>
+    <p>Learn about our workshops, events, and community projects designed to promote sustainable gardening and green living.</p>
+
+    <h2>Newsletter Signup</h2>
+    <p>Subscribe to our newsletter for seasonal tips, design inspiration, and special offers.</p>
+
+    <h2>Social Media Connections</h2>
+
+    <h2>Accessibility Statement</h2>
+    <p>Leafora Garden Designs is committed to making our website accessible to all users, including those with disabilities. If you encounter barriers, please contact us for assistance.</p>
+
+    <h2>Privacy and Security</h2>
+    <p>We take your privacy seriously. For details on how we manage personal data, please refer to our <a href="privacy.html">Privacy Policy</a>.</p>
+
+    <h2>General Information</h2>
+    <p>For any other questions or information not covered above, please feel free to contact our general inquiries team.</p>
+
+    <!-- Additional expanded content to increase volume -->
+
+    <h2>In-Depth Gardening Advice and Guidance</h2>
+    <p>We understand gardening can be complex, so we provide extensive guidance on topics such as soil preparation, pest control, plant selection, and sustainable gardening practices.</p>
+    <p>Our experts publish seasonal tips and advice to help you maintain a healthy, vibrant garden year-round.</p>
+
+    <h2>Scheduling and Project Planning</h2>
+    <p>Planning is critical. We assist clients in scheduling projects to align with seasonal conditions and resource availability, thus ensuring optimal results.</p>
+
+    <h2>Customer Support Policies</h2>
+    <p>Learn about our commitment to you, including response times, escalation procedures, and how to access ongoing support.</p>
+
+    <h2>Special Projects and Custom Requests</h2>
+    <p>Got a special project or unique request? We love challenges. Contact us to explore custom solutions tailored to your specific garden or landscaping needs.</p>
+
+    <h2>Updates and Announcements</h2>
+    <p>Stay informed with our latest news, product launches, and community events by regularly visiting this page or subscribing to our communications.</p>
+
+    <h2>User Feedback and Testimonials</h2>
+    <p>Your feedback helps us grow. We encourage sharing testimonials, photos, and experiences with Leafora Garden Designs to inspire others.</p>
+
+    <h2>Security Best Practices</h2>
+    <p>To safeguard your interactions with us, we employ encryption and adhere to best practices in website and data security.</p>
+
+    <h2>Frequently Asked Contact Questions</h2>
+    <p>If you have queries about how to reach us or our communication policies, please refer to this section for quick answers.</p>
+
+    <h2>Contact Form Tips</h2>
+    <p>Instructions on completing the contact form accurately to ensure timely and efficient responses from our team.</p>
+
+    <h2>Emergency Contact Information</h2>
+    <p>For urgent matters related to ongoing projects or emergencies, please use our direct phone line provided above.</p>
+
+    <h2>Privacy Commitment</h2>
+    <p>Our commitment to privacy and data protection extends to all communication channels. Your information is handled confidentially and responsibly.</p>
+
+    <h2>Community Initiatives</h2>
+    <p>Learn about how you can participate in our community greening efforts and environmental stewardship programs.</p>
+
+    <h2>Corporate Responsibility</h2>
+    <p>Leafora Garden Designs is committed to sustainability, ethical business practices, and supporting local communities through green initiatives.</p>
+
+</main>
+
+<footer role="contentinfo">
+  <div class="container">
+    <address>
+      East 14th Street, New York, NY 10003, United States
+    </address>
+    <span class="phone">Phone: +1-855-755-0199</span>
+  </div>
+</footer>
+
+<script>
+  const mobileToggle = document.getElementById('mobileToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  mobileToggle.addEventListener('click', () => {
+    const expanded = mobileToggle.getAttribute('aria-expanded') === 'true';
+    if (expanded) {
+      mobileMenu.hidden = true;
+      mobileToggle.setAttribute('aria-expanded', 'false');
+      mobileMenu.classList.remove('show');
+    } else {
+      mobileMenu.hidden = false;
+      mobileToggle.setAttribute('aria-expanded', 'true');
+      mobileMenu.classList.add('show');
+    }
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 767) {
+      mobileMenu.hidden = true;
+      mobileMenu.classList.remove('show');
+      mobileToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+</script>
+
+</body>
+</html>
+
