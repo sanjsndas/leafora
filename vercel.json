@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "https://leaf-ora.vercel.app/",
+      "permanent": false
+    }
+  ]
+}
